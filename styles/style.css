@@ -79,9 +79,11 @@ html::-webkit-scrollbar {
 
 .title-decor {
   display: flex;
+  color: var(--list-title);
   background-color: var(--accent-color);
   font-size: var(--font-size);
   font-family: var(--font-family);
+  font-weight: 400;
 }
 
 .header {
@@ -129,6 +131,7 @@ html::-webkit-scrollbar {
   width: calc(50% - 20px);
   margin-top: 111px;
   margin-right: 20px;
+  font-weight: 700;
 }
 
 .header__theme-menu {
@@ -153,11 +156,19 @@ html::-webkit-scrollbar {
   border-bottom: 1px solid var(--color-btn);
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--color-btn);
+}
+
 .header__theme-menu-button:active {
   outline: 1px solid var(--color-btn);
 }
 
 .header__theme-menu-button_active {
+  outline: 1px solid var(--color-btn);
+}
+
+.header__theme-menu-button:hover {
   outline: 1px solid var(--color-btn);
 }
 
@@ -299,9 +310,9 @@ html::-webkit-scrollbar {
 .footer {
   position: relative;
   display: grid;
+  min-height: 100vh;
   align-items: center;
   justify-items: center;
-  min-height: 768px;
 }
 
 .footer::before {
@@ -372,24 +383,23 @@ html::-webkit-scrollbar {
 
 @media (min-width: 375px) and (max-width: 767px) {
   .rec::after{
-    top: 17px;
-    right: 16px;
+    top: 13px;
+    right: 10px;
   }
 
   .rec::before{
-    right: 34px;
-    top: 17px;
+    right: 29px;
+    top: 12px;
   }
   .header {
-    padding: 0 10px 0 0;
-    margin-bottom: 46px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 30px;
   }
 
   .header__theme-menu-list {
-    margin-top: 80px;
+    margin-top: 75px;
     gap: 12px;
     align-items: end;
-    padding-right: 6px;
   }
 
   .header__theme-menu {
@@ -397,13 +407,13 @@ html::-webkit-scrollbar {
   }
 
   .header::after {
-    right: 16px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
   }
 
   .header::before {
-    left: 4px;
-    bottom: 5px;
+    left: 10px;
+    bottom: 10px;
   }
 
   .site-heading {
@@ -412,7 +422,6 @@ html::-webkit-scrollbar {
 
   .header__title {
     margin-top: 18%;
-    padding-left: 4px;
   }
 
   .header__text {
@@ -422,8 +431,13 @@ html::-webkit-scrollbar {
   }
 
   .main__sections {
-    margin: 5px;
+    margin: 0;
     gap: 50px;
+    padding: 10px;
+  }
+
+  .section__list-item {
+    gap: 10px;
   }
 
   .text__section {
@@ -439,11 +453,11 @@ html::-webkit-scrollbar {
   }
 
   .common-heading {
-    width: 97%;
+    width: 100%;
   }
 
   .section__list {
-    width: 97%;
+    width: 100%;
   }
 
   .attention__section.text__content {
@@ -451,18 +465,20 @@ html::-webkit-scrollbar {
   }
 
   .text__content {
-    width: 98%;
+    width: 100%;
   }
 
   .title-decor {
-    width: 97%;
+    line-height: 23.6px;
+    margin-left: 1px;
+    width: 100%;
   }
 
   .img__gallery {
     display: flex;
     flex-direction: column;
-    width: 98%;
-    gap: 5px;
+    width: 100%;
+    gap: 9px;
   }
 
   .img__gallery img:nth-child(4) {
@@ -474,18 +490,17 @@ html::-webkit-scrollbar {
 }
 
   .footer__title {
-    margin-top: -29%;
-    margin-left: -15px;
+    margin-top: -5%;
   }
 
   .footer::after {
-    right: 16px;
-    top: 7px;
+    right: 10px;
+    top: 0px;
   }
 
   .footer::before {
-    left: 4px;
-    bottom: 114px;
+    left: 10px;
+    bottom: 22px;
   }
 
 }
