@@ -1,9 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-html::-webkit-scrollbar {
+
+.example::-webkit-scrollbar {
   display: none;
 }
 
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 :root {
   --accent-color: #ff0070;
