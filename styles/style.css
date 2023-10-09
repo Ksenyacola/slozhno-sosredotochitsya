@@ -1,6 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
 .example::-webkit-scrollbar {
   display: none;
 }
@@ -12,16 +11,16 @@
 
 :root {
   --accent-color: #ff0070;
-  --title-color: #DB00FF;
-  --font-color: #F1B2CE;
+  --title-color: #db00ff;
+  --font-color: #f1b2ce;
   --font-size: 18px;
   --font-family: IBM Plex Mono, monospace;
   --background-color: #000028;
-  --color-btn: #FF0070;
-  --decorative-element: #FF0070;
-  --header-shadow: #FF0070;
+  --color-btn: #ff0070;
+  --decorative-element: #ff0070;
+  --header-shadow: #ff0070;
   --list-title: #000028;
-  --common-heading: #FF0070;
+  --common-heading: #ff0070;
   --rec-visibility: visibility;
 }
 
@@ -95,19 +94,19 @@
   display: flex;
   position: relative;
   min-height: 100vh;
-  margin-bottom: 60px;
+  margin-bottom: 6%;
   flex-direction: column;
 }
 
-.header::before {
+.header__text::before {
   content: "";
   border-left: 1px solid var(--decorative-element);
   border-bottom: 1px solid var(--decorative-element);
   width: 25px;
   height: 25px;
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  right: 195%;
+  bottom: -15vh;
 }
 
 .header::after {
@@ -117,14 +116,14 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 2.55vh;
+  top: 2.6vh;
 }
 
 .header__title {
   display: grid;
   align-items: center;
-  margin-top: 25%;
+  margin-top: 27%;
 }
 
 .header__theme-menu-item {
@@ -132,15 +131,16 @@
 }
 
 .header__text {
+  position: relative;
   margin-left: auto;
   width: calc(50% - 20px);
-  margin-top: 111px;
+  margin-top: 10.8%;
   margin-right: 20px;
   font-weight: 700;
 }
 
 .header__theme-menu {
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .header__theme-menu-button {
@@ -220,7 +220,6 @@
   width: 34%;
 }
 
-
 .main__sections {
   display: flex;
   flex-direction: column;
@@ -276,6 +275,34 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--list-title);
+}
+
+.how__section-list {
+  display: flex;
+}
+
+.section-how {
+  width: 34%;
+  flex-shrink: 0;
+}
+
+.section__list_item-how {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.how__section-content {
+  gap: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section__list-how {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .img__gallery {
@@ -343,16 +370,31 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    margin-bottom: 8%;
+  }
+
+  .header::after {
+    right: 3%;
+    top: 2%;
+  }
+
+  .header::before {
+    left: 3%;
+    bottom: 2%;
+  }
+
   .header__theme-menu-list {
     display: flex;
     flex-direction: column;
     gap: 11px;
-    margin-top: 23.9%;
+    margin-top: 22.5%;
     align-items: flex-end;
+    padding-right: 20px;
   }
 
   .header__title {
-    margin-top: 20%;
+    margin-top: 23%;
   }
 
   .site-heading {
@@ -364,7 +406,7 @@
   }
 
   .header__text {
-    margin-top: 161px;
+    margin-top: 21%;
   }
 
   .attention__section-list {
@@ -376,23 +418,22 @@
     width: 32%;
   }
 
+  .section-how {
+    width: 35%;
+  }
+
   .section__list {
     width: 66%;
   }
-
-  .footer__title {
-    margin-top: 33%;
-  }
 }
 
-
 @media (min-width: 375px) and (max-width: 767px) {
-  .rec::after{
+  .rec::after {
     top: 13px;
     right: 10px;
   }
 
-  .rec::before{
+  .rec::before {
     right: 29px;
     top: 12px;
   }
@@ -405,6 +446,7 @@
     margin-top: 75px;
     gap: 12px;
     align-items: end;
+    margin-right: -19px;
   }
 
   .header__theme-menu {
@@ -416,9 +458,9 @@
     top: 10px;
   }
 
-  .header::before {
-    left: 10px;
-    bottom: 10px;
+  .header__text::before {
+    left: -4px;
+    bottom: -48px;
   }
 
   .site-heading {
@@ -445,10 +487,21 @@
     gap: 10px;
   }
 
+  .how__section-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .how__section-content {
+    gap: 19px;
+  }
+
   .text__section {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
   }
 
   .attention__section {
@@ -488,24 +541,27 @@
 
   .img__gallery img:nth-child(4) {
     order: 2;
-}
+  }
 
-.img__gallery img:nth-child(5) {
+  .img__gallery img:nth-child(5) {
     order: 1;
-}
+  }
+
+  .image__section {
+    gap: 10px;
+  }
 
   .footer__title {
-    margin-top: -5%;
+    margin-top: -3%;
   }
 
   .footer::after {
     right: 10px;
-    top: 0px;
+    top: 3px;
   }
 
   .footer::before {
     left: 10px;
-    bottom: 22px;
+    bottom: 18px;
   }
-
 }
