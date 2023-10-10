@@ -28,7 +28,7 @@
   font-family: var(--font-family);
   background-image: url(../images/cover-image-dark.png);
   background-position: top;
-  max-width: 100%;
+  max-width: 1024px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -94,9 +94,9 @@
   padding-block-start: 20px;
   display: flex;
   position: relative;
-  min-height: 100vh;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   flex-direction: column;
+  min-height: calc(100vh - 20px);
 }
 
 .header::before {
@@ -118,7 +118,7 @@
   height: 25px;
   position: absolute;
   left: 20px;
-  bottom: 0; /*когда указываю значение, он катается, а без - немного встает не по макету*/
+  bottom: 0;
 }
 
 .header__title {
@@ -420,146 +420,7 @@
     width: 67%;
   }
 }
-
-/*@media (min-width: 375px) and (max-width: 767px) {
-  .rec::after {
-    top: 13px;
-    right: 10px;
-  }
-
-  .rec::before {
-    right: 29px;
-    top: 12px;
-  }
-  .header {
-    padding: 0 10px 0 10px;
-    margin-bottom: 10px;
-  }
-
-  .header__theme-menu-list {
-    margin-top: 55px;
-    gap: 12px;
-    align-items: end;
-    margin-right: -19px;
-  }
-
-  .header__theme-menu {
-    padding: 0;
-  }
-
-  .header::after {
-    left: 10px;
-    bottom: 0;
-  }
-
-  .header::before {
-    right: 10px;
-    top: -10px;
-  }
-
-  .site-heading {
-    font-size: 116px;
-  }
-
-  .header__title {
-    margin-top: 65px;
-  }
-
-  .header__text {
-    margin-top: 52px;
-    width: 97%;
-    margin-left: 4px;
-  }
-
-  .main__sections {
-    margin: 0;
-    gap: 50px;
-    padding: 10px;
-  }
-
-  .section__list-item {
-    gap: 10px;
-  }
-
-  .how__section-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .how__section-content {
-    gap: 19px;
-  }
-
-  .text__section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .attention__section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .common-heading {
-    width: 100%;
-  }
-
-  .section__list {
-    width: 100%;
-  }
-
-  .attention__section.text__content {
-    width: 100%;
-  }
-
-  .text__content {
-    width: 100%;
-  }
-
-  .title-decor {
-    line-height: 23.6px;
-    margin-left: 1px;
-    width: 100%;
-  }
-
-  .img__gallery {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 9px;
-  }
-
-  .img__gallery img:nth-child(4) {
-    order: 2;
-  }
-
-  .img__gallery img:nth-child(5) {
-    order: 1;
-  }
-
-  .image__section {
-    gap: 10px;
-  }
-
-  .footer__title {
-    margin-top: -3%;
-  }
-
-  .footer::after {
-    right: 10px;
-    top: 3px;
-  }
-
-  .footer::before {
-    left: 10px;
-    bottom: 18px;
-  }
-}*/
-
+/* на мой взгляд лучше сделать запрос в 500, тк отваливаются заголовки.*/
 @media screen and (max-width: 500px) {
   .page {
     padding: 10px;
@@ -618,6 +479,7 @@
 
   .header {
     margin-bottom: 50px;
+    min-height: calc(100vh - 20px);
   }
 
   .site-heading {
