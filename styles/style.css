@@ -118,7 +118,7 @@
   height: 25px;
   position: absolute;
   left: 20px;
-  bottom: 0;
+  bottom: 0; /*когда указываю значение, он катается, а без - немного встает не по макету*/
 }
 
 .header__title {
@@ -167,10 +167,6 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--color-btn);
-}
-
-.header__theme-menu-button:hover {
   outline: 1px solid var(--color-btn);
 }
 
